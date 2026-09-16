@@ -1,20 +1,31 @@
-# NF Gold & Luxury Jewelry — site web
+NF GOLD & LUXURY JEWELRY — VERSION FINALE
 
-Le site est prêt à être publié gratuitement sur une plateforme d'hébergement statique.
+Version corrigée pour GitHub Pages. Tous les chemins d’images et de médias sont locaux afin d’éviter les éléments qui ne s’affichent pas.
 
-## Avant publication
-Dans `index.html` et `script.js`, remplacez :
-- `1XXXXXXXXXX` par votre numéro WhatsApp au format international, sans espaces ni `+`
-- `VOTREEMAIL@EXEMPLE.COM` par votre adresse email
-- `VOTRE_INSTAGRAM` par votre nom Instagram
+Contenu :
+- index.html
+- style.css
+- script.js
+- logo.jpeg
+- images/ : créations et visuels du site
+- media/ : photos de chaînes + 2 vidéos
 
-## Publication gratuite
-Vous pouvez déposer le contenu de ce dossier sur GitHub Pages, Netlify ou une autre plateforme d'hébergement statique gratuite.
+Fonctions :
+- Anglais par défaut + bouton FR/EN
+- Design luxe noir & or
+- Tour Eiffel élégante intégrée directement en SVG
+- Galerie créations
+- Galerie chaînes / détails bijoux
+- 2 vidéos intégrées
+- Formulaire de devis vers WhatsApp
+- WhatsApp : +1 561 537 9432
+- Tawk.to Live Chat intégré
+- Responsive mobile
 
-## À améliorer ensuite
-- connecter un vrai formulaire qui reçoit les demandes directement
-- ajouter vos tarifs / fourchettes de prix
-- ajouter une page FAQ
-- ajouter votre adresse ou zone de livraison si vous le souhaitez
-- ajouter un bouton bilingue FR / EN
-- ajouter Google Business Profile et les éléments SEO locaux
+INSTALLATION GITHUB :
+1. Décompresser ce ZIP.
+2. Dans le dépôt GitHub, cliquer Add file > Upload files.
+3. Ouvrir le dossier NF_Gold_Luxury_FINAL et sélectionner TOUT son contenu, y compris les dossiers images et media.
+4. Remplacer les fichiers existants.
+5. Cliquer Commit changes.
+6. Attendre quelques minutes puis recharger la page GitHub Pages.
