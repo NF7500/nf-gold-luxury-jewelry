@@ -1,15 +1,20 @@
-NF GOLD & LUXURY JEWELRY — SITE WEB
+# NF Gold & Luxury Jewelry — site web
 
-Version préparée avec :
-- Logo officiel fourni
-- WhatsApp : +1 561 537 9432
-- Formulaire de devis envoyé vers WhatsApp
-- Galerie de visuels et créations
-- Hébergement statique gratuit possible (GitHub Pages / Netlify)
-- Section prévue pour le chat en direct tawk.to
+Le site est prêt à être publié gratuitement sur une plateforme d'hébergement statique.
 
-CHAT EN DIRECT
-Pour activer le chat, créez un compte gratuit sur https://www.tawk.to/ puis récupérez le code du widget. Il faudra l'insérer avant </body> dans index.html.
+## Avant publication
+Dans `index.html` et `script.js`, remplacez :
+- `1XXXXXXXXXX` par votre numéro WhatsApp au format international, sans espaces ni `+`
+- `VOTREEMAIL@EXEMPLE.COM` par votre adresse email
+- `VOTRE_INSTAGRAM` par votre nom Instagram
 
-CONTACT
-Le site n'utilise pas encore d'adresse e-mail ni d'Instagram, conformément à votre demande.
+## Publication gratuite
+Vous pouvez déposer le contenu de ce dossier sur GitHub Pages, Netlify ou une autre plateforme d'hébergement statique gratuite.
+
+## À améliorer ensuite
+- connecter un vrai formulaire qui reçoit les demandes directement
+- ajouter vos tarifs / fourchettes de prix
+- ajouter une page FAQ
+- ajouter votre adresse ou zone de livraison si vous le souhaitez
+- ajouter un bouton bilingue FR / EN
+- ajouter Google Business Profile et les éléments SEO locaux
