@@ -1,18 +1,19 @@
-document.getElementById("contactForm").addEventListener("submit", function(e){
+const langToggle = document.getElementById('langToggle');
+let lang = 'en';
+function setLanguage(next) {
+  lang = next;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const value = el.getAttribute(`data-${lang}`);
+    if (value !== null) el.innerHTML = value.replace(/\\n/g, '<br>');
+  });
+  langToggle.textContent = lang === 'en' ? 'FR' : 'EN';
+}
+langToggle.addEventListener('click', () => setLanguage(lang === 'en' ? 'fr' : 'en'));
+
+document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
-  const data = new FormData(this);
-  const name = data.get("name");
-  const email = data.get("email") || "Not provided";
-  const phone = data.get("phone") || "Not provided";
-  const jewelry = data.get("jewelry");
-  const message = data.get("message");
-  const text =
-    "Hello NF Gold & Luxury Jewelry,\n\n" +
-    "I would like to request a quote.\n\n" +
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Phone / WhatsApp: " + phone + "\n" +
-    "Jewelry type: " + jewelry + "\n\n" +
-    "Project:\n" + message;
-  window.open("https://wa.me/15615379432?text=" + encodeURIComponent(text), "_blank");
+  const f = new FormData(e.currentTarget);
+  const text = `NF Gold & Luxury Jewelry - Quote Request\n\nName: ${f.get('name')}\nPhone / WhatsApp: ${f.get('phone') || ''}\nJewelry: ${f.get('jewelry')}\nProject: ${f.get('message')}`;
+  window.open(`https://wa.me/15615379432?text=${encodeURIComponent(text)}`, '_blank');
 });

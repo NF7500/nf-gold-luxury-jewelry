@@ -1,20 +1,24 @@
-# NF Gold & Luxury Jewelry — site web
+NF GOLD & LUXURY JEWELRY — FINAL SITE
 
-Le site est prêt à être publié gratuitement sur une plateforme d'hébergement statique.
+Cette version corrige les liens cassés de l'ancienne version et contient une Tour Eiffel luxe noir & or intégrée directement en SVG : aucun fichier images/eiffel manquant.
 
-## Avant publication
-Dans `index.html` et `script.js`, remplacez :
-- `1XXXXXXXXXX` par votre numéro WhatsApp au format international, sans espaces ni `+`
-- `VOTREEMAIL@EXEMPLE.COM` par votre adresse email
-- `VOTRE_INSTAGRAM` par votre nom Instagram
+Contenu :
+- index.html
+- style.css
+- script.js
+- logo.jpeg
 
-## Publication gratuite
-Vous pouvez déposer le contenu de ce dossier sur GitHub Pages, Netlify ou une autre plateforme d'hébergement statique gratuite.
+Fonctions :
+- Anglais par défaut + bouton FR/EN
+- Design luxe noir & or
+- Tour Eiffel / identité française intégrée
+- Galerie basée sur les visuels déjà présents dans le dépôt GitHub
+- Formulaire de devis qui ouvre WhatsApp
+- WhatsApp : +1 561 537 9432
+- Tawk.to Live Chat intégré
+- Responsive mobile
 
-## À améliorer ensuite
-- connecter un vrai formulaire qui reçoit les demandes directement
-- ajouter vos tarifs / fourchettes de prix
-- ajouter une page FAQ
-- ajouter votre adresse ou zone de livraison si vous le souhaitez
-- ajouter un bouton bilingue FR / EN
-- ajouter Google Business Profile et les éléments SEO locaux
+IMPORTANT : les photos existantes de la galerie sont chargées depuis le dépôt GitHub actuel. Les vidéos personnelles et nouvelles photos de chaîne pourront être ajoutées ensuite dès que les fichiers sont disponibles.
+
+GitHub Pages :
+Déposer les fichiers de cette version à la racine du dépôt, remplacer index.html/style.css/script.js et garder logo.jpeg.
