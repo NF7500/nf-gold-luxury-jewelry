@@ -8,11 +8,9 @@ STRUCTURE OBLIGATOIRE
 ---------------------
 index.html
 assets/
-  hero.jpg
-  craftsmanship.jpg
-  design-reference.jpg
-
-INSTALLATION GITHUB
+├── hero.jpg
+├── craftsmanship.jpg
+└── design-reference.jpgINSTALLATION GITHUB
 -------------------
 1. Décompressez ce ZIP.
 2. Dans le repository nf-gold-luxury-jewelry, remplacez index.html.
