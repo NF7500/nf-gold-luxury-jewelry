@@ -1,118 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NF Gold & Luxury Jewelry — custom 18K gold and diamond jewelry in Florida, with a refined French touch.">
-  <title>NF Gold & Luxury Jewelry | Florida</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NF Gold & Luxury Jewelry — French-inspired custom 18K gold and diamond jewelry.">
+<title>NF Gold & Luxury Jewelry | Timeless Elegance</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Allura&display=swap');
+
+:root{
+  --black:#050505; --black2:#0b0805; --gold:#d9ad62; --gold2:#f0c978;
+  --white:#f8f6f1; --muted:#b9b4ad; --line:rgba(217,173,98,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.header{
+  position:fixed;top:0;left:0;width:100%;height:104px;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;padding:0 4.5%;
+  background:rgba(3,3,3,.93);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)
+}
+.brand{display:flex;align-items:center;gap:18px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:60px;line-height:.8;color:var(--gold);font-weight:600}
+.brand-text strong{display:block;letter-spacing:5px;color:#e6c37d;font-size:18px}
+.brand-text span{display:block;text-align:center;letter-spacing:4px;font-size:10px;color:#aaa;margin-top:5px}
+.nav{display:flex;gap:42px;align-items:center}
+.nav a{font-size:15px;color:#eee;position:relative;padding:40px 0}
+.nav a.active:after,.nav a:hover:after{content:"";position:absolute;bottom:25px;left:0;right:0;height:3px;background:var(--gold)}
+.actions{display:flex;align-items:center;gap:22px}
+.lang{border:1px solid #a57d39;border-radius:30px;padding:8px 15px;display:flex;gap:10px;align-items:center;font-size:13px}
+.lang button{border:0;background:none;color:white;cursor:pointer}
+.icon{font-size:25px;color:var(--gold);cursor:pointer}
+.menu-btn{display:none;background:none;border:0;color:var(--gold);font-size:28px}
+
+.hero{
+  margin-top:104px;min-height:518px;position:relative;overflow:hidden;
+  background:#030303;
+}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),transparent 65%)}
+.hero-content{position:relative;z-index:2;height:518px;display:flex;align-items:center;padding-left:4.7%}
+.hero-copy{max-width:760px;opacity:.02} /* Text is already embedded in the supplied visual. */
+.hero-copy *{pointer-events:none}
+
+.section{padding:76px 5%;border-top:1px solid rgba(217,173,98,.18)}
+.touch{display:grid;grid-template-columns:30% 70%;min-height:420px;padding:0}
+.touch-image{min-height:420px;background:url("assets/necklace-visual.jpg") center/cover no-repeat}
+.touch-copy{padding:58px 6%;display:grid;grid-template-columns:1fr 320px;gap:50px;align-items:center;background:linear-gradient(100deg,#080604,#030303)}
+.eyebrow{color:#d9ad62;letter-spacing:4px;font-size:13px;font-weight:600}
+.title{font-family:"Cormorant Garamond",serif;font-size:36px;line-height:1.05;margin:14px 0 12px}
+.body{color:#ddd;font-size:15px;max-width:650px}
+.script{font-family:Allura,cursive;color:#e1b665;font-size:43px;margin-top:15px}
+.fr-line{width:118px;height:4px;margin-top:5px;background:linear-gradient(90deg,#1b4e9b 0 33%,white 33% 66%,#ed2939 66%)}
+.features{border-left:1px solid #9b7131;padding-left:45px;display:grid;gap:25px}
+.feature{display:grid;grid-template-columns:55px 1fr;gap:12px}
+.feature .ico{font-size:33px;color:var(--gold)}
+.feature b{display:block;font-size:13px;letter-spacing:1px;color:#d8bd91}
+.feature span{font-size:13px;color:#aaa}
+
+.creations{background:#070605}
+.heading{text-align:center;max-width:700px;margin:0 auto 40px}
+.heading .title{font-size:48px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#0e0c09;border:1px solid rgba(217,173,98,.18);overflow:hidden}
+.card .ph{height:300px;display:grid;place-items:center;background:radial-gradient(circle,#3b2a16,#080706 65%);color:#dcb46c;font-family:"Cormorant Garamond";font-size:30px}
+.card-body{padding:20px}.card h3{font-family:"Cormorant Garamond";font-size:25px}.card p{color:#aaa;font-size:13px}
+
+.process{background:#030303}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:45px}
+.step{padding:30px;border-top:1px solid var(--gold)}
+.num{font-family:"Cormorant Garamond";font-size:42px;color:var(--gold)}
+.step h3{font-family:"Cormorant Garamond";font-size:26px;margin:5px 0}
+.step p{font-size:13px;color:#aaa}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.form{background:#0d0a07;padding:35px;border:1px solid rgba(217,173,98,.2)}
+.form label{display:block;font-size:12px;color:#bdb7ad;margin:14px 0 6px}
+.form input,.form select,.form textarea{width:100%;padding:13px 14px;background:#050505;color:white;border:1px solid #40362a;outline:none}
+.form textarea{min-height:100px;resize:vertical}
+.gold-btn{margin-top:18px;border:0;background:linear-gradient(135deg,#e8c27a,#b98a40);color:#0b0906;font-weight:700;padding:14px 24px;cursor:pointer;letter-spacing:1px}
+.wa{display:inline-flex;align-items:center;gap:9px;background:#19b954;color:white;padding:13px 18px;border-radius:30px;font-weight:600;margin-top:20px}
+
+.footer{padding:28px 5%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#8e8982;font-size:12px}
+
+.float-wa{position:fixed;left:25px;bottom:25px;background:#20bd58;color:#fff;padding:13px 20px;border-radius:28px;z-index:45;box-shadow:0 8px 30px rgba(0,0,0,.4);font-weight:600}
+.chat{position:fixed;right:25px;bottom:25px;z-index:45;background:#1dbd58;color:white;border:0;border-radius:30px;padding:15px 24px;box-shadow:0 8px 35px rgba(25,180,80,.35);cursor:pointer}
+.chat-panel{display:none;position:fixed;right:25px;bottom:85px;width:330px;background:#111;border:1px solid #5f4826;border-radius:16px;z-index:60;overflow:hidden;box-shadow:0 20px 60px #000}
+.chat-head{background:#1dbd58;padding:16px;font-weight:700}
+.chat-body{padding:20px;color:#ddd;font-size:14px}
+.chat-panel a{display:block;margin-top:15px;background:#20bd58;padding:11px;text-align:center;border-radius:8px}
+
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;place-items:center;padding:25px}
+.modal-box{max-width:720px;width:100%;background:#0c0a08;border:1px solid var(--gold);padding:35px;text-align:center}
+.close{float:right;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}
+
+@media(max-width:1050px){
+ .nav{gap:20px}.nav a{font-size:13px}
+ .touch-copy{grid-template-columns:1fr}.features{border-left:0;border-top:1px solid #8c682f;padding:25px 0 0}
+}
+@media(max-width:800px){
+ .header{height:78px;padding:0 20px}.logo{font-size:45px}.brand-text strong{font-size:11px;letter-spacing:3px}.brand-text span{font-size:7px}
+ .nav{display:none;position:absolute;top:78px;left:0;right:0;background:#050505;padding:15px 25px;flex-direction:column;gap:0;border-bottom:1px solid var(--line)}
+ .nav.open{display:flex}.nav a{padding:14px;width:100%}.nav a.active:after,.nav a:hover:after{bottom:4px}
+ .menu-btn{display:block}.actions{gap:12px}.lang{padding:5px 8px}
+ .hero{margin-top:78px;min-height:390px}.hero-bg{object-fit:cover;object-position:center top}.hero-content{height:390px}
+ .touch{grid-template-columns:1fr}.touch-image{min-height:300px}.touch-copy{padding:40px 25px}
+ .grid,.steps,.contact{grid-template-columns:1fr}.section{padding:55px 25px}
+ .heading .title{font-size:38px}.title{font-size:32px}
+ .float-wa{left:15px;bottom:15px;font-size:12px}.chat{right:15px;bottom:15px;font-size:12px}.chat-panel{right:15px;bottom:75px;width:calc(100% - 30px)}
+ .footer{flex-direction:column;gap:8px}
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#home"><img src="logo.jpeg" alt="NF Gold & Luxury Jewelry"></a>
-  <nav>
-    <a href="#custom" data-en="Custom Jewelry" data-fr="Bijoux sur mesure">Custom Jewelry</a>
-    <a href="#paris" data-en="French Touch" data-fr="Touche française">French Touch</a>
-    <a href="#creations" data-en="Creations" data-fr="Créations">Creations</a>
-    <a href="#process" data-en="Process" data-fr="Processus">Process</a>
-    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+
+<header class="header">
+  <a href="#home" class="brand">
+    <div class="logo">NF</div>
+    <div class="brand-text"><strong>GOLD &amp; LUXURY JEWELRY</strong><span>TIMELESS ELEGANCE</span></div>
+  </a>
+  <nav class="nav" id="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#french">French Craftsmanship</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <div class="header-actions">
-    <button id="langToggle" class="lang">FR</button>
-    <a class="nav-cta" href="#contact" data-en="Get a Quote" data-fr="Demander un devis">Get a Quote</a>
+  <div class="actions">
+    <div class="lang"><button onclick="setLang('EN')">🇺🇸 EN</button><button onclick="setLang('FR')">🇫🇷 FR</button></div>
+    <span class="icon">⌕</span><span class="icon">♧</span>
+    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   </div>
 </header>
 
 <main>
-<section id="home" class="hero">
-  <div class="hero-glow"></div>
+<section class="hero" id="home">
+  <img class="hero-bg" src="assets/hero-visual.jpg" alt="NF Gold & Luxury Jewelry — Paris and French craftsmanship">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="eyebrow" data-en="FLORIDA • FRENCH TOUCH • CUSTOM JEWELRY" data-fr="FLORIDE • TOUCHE FRANÇAISE • BIJOUX SUR MESURE">FLORIDA • FRENCH TOUCH • CUSTOM JEWELRY</p>
-    <h1 data-en="Your jewelry.\nYour story." data-fr="Votre bijou.\nVotre histoire.">Your jewelry.<br><em>Your story.</em></h1>
-    <p class="hero-text" data-en="Custom 18K gold and diamond jewelry, imagined around your vision and finished with timeless elegance." data-fr="Des bijoux personnalisés en or 18K et diamants, imaginés selon vos envies avec une élégance intemporelle.">Custom 18K gold and diamond jewelry, imagined around your vision and finished with timeless elegance.</p>
-    <div class="hero-buttons">
-      <a class="button gold" href="#contact" data-en="Create My Jewelry" data-fr="Créer mon bijou">Create My Jewelry</a>
-      <a class="button outline" href="#creations" data-en="View Creations" data-fr="Voir les créations">View Creations</a>
+    <div class="hero-copy"><h1>Exceptional Jewelry for Extraordinary People</h1></div>
+  </div>
+</section>
+
+<section class="touch" id="french">
+  <div class="touch-image"></div>
+  <div class="touch-copy">
+    <div>
+      <div class="eyebrow">🇫🇷 &nbsp; FRENCH CRAFTSMANSHIP</div>
+      <h2 class="title">A FRENCH TOUCH<br>IN EVERY CREATION</h2>
+      <p class="body">French craftsmanship is at the heart of NF Gold &amp; Luxury Jewelry. As a French jeweler, I bring a French touch to every creation, combining elegance, attention to detail and a passion for fine jewelry.</p>
+      <div class="script">Made with passion</div>
+      <div style="letter-spacing:3px;font-size:11px">BY A FRENCH JEWELER</div>
+      <div class="fr-line"></div>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="ico">◇</div><div><b>PREMIUM QUALITY</b><span>Only the finest materials</span></div></div>
+      <div class="feature"><div class="ico">♢</div><div><b>SECURE PAYMENT</b><span>Shop with confidence</span></div></div>
+      <div class="feature"><div class="ico">▱</div><div><b>FAST &amp; RELIABLE SHIPPING</b><span>Worldwide delivery</span></div></div>
+      <div class="feature"><div class="ico">◉</div><div><b>DEDICATED SUPPORT</b><span>We're here for you</span></div></div>
     </div>
   </div>
-  <div class="hero-mark"><span>NF</span><small>GOLD & LUXURY</small></div>
 </section>
 
-<section id="custom" class="section">
-  <div class="section-heading">
-    <p class="eyebrow">NF GOLD & LUXURY JEWELRY</p>
-    <h2 data-en="Made for <span>your story.</span>" data-fr="Créé pour <span>votre histoire.</span>">Made for <span>your story.</span></h2>
-    <p data-en="From a name necklace to a one-of-a-kind diamond piece, every project begins with your idea." data-fr="Du collier prénom à la pièce sertie de diamants, chaque projet commence par votre idée.">From a name necklace to a one-of-a-kind diamond piece, every project begins with your idea.</p>
-  </div>
-  <div class="feature-grid">
-    <article><div class="icon">✦</div><h3 data-en="One-of-a-Kind" data-fr="Pièce unique">One-of-a-Kind</h3><p data-en="A creation designed around your style, occasion and story." data-fr="Une création pensée autour de votre style, de votre événement et de votre histoire.">A creation designed around your style, occasion and story.</p></article>
-    <article><div class="icon">◇</div><h3 data-en="18K Gold & Diamonds" data-fr="Or 18K & diamants">18K Gold & Diamonds</h3><p data-en="Elegant materials and finishes selected for your project." data-fr="Des matériaux et finitions élégants choisis pour votre projet.">Elegant materials and finishes selected for your project.</p></article>
-    <article><div class="icon">♢</div><h3 data-en="Personal Service" data-fr="Service personnalisé">Personal Service</h3><p data-en="We discuss your design, dimensions and options directly with you." data-fr="Nous échangeons directement avec vous sur le design, les dimensions et les options.">We discuss your design, dimensions and options directly with you.</p></article>
+<section class="section creations" id="shop">
+  <div class="heading"><div class="eyebrow">SELECTED CREATIONS</div><h2 class="title">Personalized pieces.</h2><p class="body" style="margin:auto">One-of-a-kind jewelry designed around your style, your name and your story.</p></div>
+  <div class="grid">
+    <article class="card"><div class="ph">NAME NECKLACE</div><div class="card-body"><h3>Name Necklace</h3><p>Personalized name jewelry crafted with attention to every detail.</p></div></article>
+    <article class="card"><div class="ph">CUSTOM CHAIN</div><div class="card-body"><h3>Custom Necklace</h3><p>A custom piece made around your style, dimensions and finish.</p></div></article>
+    <article class="card"><div class="ph">YOUR DESIGN</div><div class="card-body"><h3>Your Design</h3><p>Choose your name, chain and details. We turn your idea into jewelry.</p></div></article>
   </div>
 </section>
 
-<section id="paris" class="paris-section">
-  <div class="paris-art" aria-label="Elegant Eiffel Tower illustration">
-    <div class="moon"></div>
-    <svg class="eiffel" viewBox="0 0 360 520" role="img" aria-label="Eiffel Tower">
-      <defs><linearGradient id="gold" x1="0" x2="1"><stop offset="0"/><stop offset=".5" stop-color="#f5d77b"/><stop offset="1"/></linearGradient></defs>
-      <g fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M150 70 L181 25 L212 70 L278 475 M150 70 L82 475 M112 255 H250 M96 310 H265 M80 375 H280 M58 475 H302"/>
-        <path d="M181 25 V475 M150 70 L250 255 M212 70 L112 255 M82 475 L250 255 M278 475 L112 255"/>
-        <path d="M120 160 H242 M105 205 H258"/>
-      </g>
-      <g fill="#f5d77b"><circle cx="181" cy="25" r="4"/><circle cx="181" cy="255" r="3"/></g>
-    </svg>
-    <div class="horizon"></div>
-  </div>
-  <div class="paris-copy">
-    <p class="eyebrow">🇫🇷 FRENCH HERITAGE</p>
-    <h2 data-en="French elegance.<br><span>Timeless luxury.</span>" data-fr="Élégance française.<br><span>Un luxe intemporel.</span>">French elegance.<br><span>Timeless luxury.</span></h2>
-    <p data-en="Inspired by Paris and French jewelry tradition, NF Gold & Luxury Jewelry brings a refined French touch to every creation." data-fr="Inspiré par Paris et la tradition joaillière française, NF Gold & Luxury Jewelry apporte une touche française raffinée à chaque création.">Inspired by Paris and French jewelry tradition, NF Gold & Luxury Jewelry brings a refined French touch to every creation.</p>
-    <div class="signature">NF <span>•</span> PARIS · FLORIDA</div>
-  </div>
-</section>
-
-<section id="creations" class="section">
-  <div class="section-heading">
-    <p class="eyebrow" data-en="SELECTED CREATIONS" data-fr="CRÉATIONS SÉLECTIONNÉES">SELECTED CREATIONS</p>
-    <h2 data-en="Personalized <span>pieces.</span>" data-fr="Des pièces <span>personnalisées.</span>">Personalized <span>pieces.</span></h2>
-  </div>
-  <div class="gallery">
-    <article><img src="https://raw.githubusercontent.com/NF7500/nf-gold-luxury-jewelry/main/thanya-necklace.jpeg" alt="Personalized name necklace"><div><h3>Name Necklace</h3><p data-en="Personalized name jewelry." data-fr="Bijou prénom personnalisé.">Personalized name jewelry.</p></div></article>
-    <article><img src="https://raw.githubusercontent.com/NF7500/nf-gold-luxury-jewelry/main/cindy-necklace.jpeg" alt="Custom necklace"><div><h3>Name Necklace</h3><p data-en="A custom piece made around your style." data-fr="Une pièce sur mesure pensée selon votre style.">A custom piece made around your style.</p></div></article>
-    <article><img src="https://raw.githubusercontent.com/NF7500/nf-gold-luxury-jewelry/main/hero.png" alt="NF Gold jewelry collection"><div><h3>Your Design</h3><p data-en="Choose your name, chain and details." data-fr="Choisissez votre prénom, votre chaîne et vos détails.">Choose your name, chain and details.</p></div></article>
-  </div>
-</section>
-
-<section class="craft-section">
-  <div class="craft-image"><img src="https://raw.githubusercontent.com/NF7500/nf-gold-luxury-jewelry/main/custom-process-en.png" alt="Custom jewelry process"></div>
-  <div class="craft-copy"><p class="eyebrow" data-en="FRENCH CRAFTSMANSHIP" data-fr="SAVOIR-FAIRE FRANÇAIS">FRENCH CRAFTSMANSHIP</p><h2 data-en="Proudly <span>French.</span> Beautifully made." data-fr="Fièrement <span>français.</span> Réalisé avec soin.">Proudly <span>French.</span> Beautifully made.</h2><p data-en="Every creation is approached with care, attention to detail and a passion for fine jewelry." data-fr="Chaque création est réalisée avec soin, attention aux détails et passion pour la joaillerie.">Every creation is approached with care, attention to detail and a passion for fine jewelry.</p></div>
-</section>
-
-<section id="process" class="section process">
-  <div class="section-heading"><p class="eyebrow" data-en="SIMPLE & PERSONALIZED" data-fr="SIMPLE & PERSONNALISÉ">SIMPLE & PERSONALIZED</p><h2 data-en="The <span>process.</span>" data-fr="Le <span>processus.</span>">The <span>process.</span></h2></div>
+<section class="section process" id="about">
+  <div class="heading"><div class="eyebrow">SIMPLE &amp; PERSONALIZED</div><h2 class="title">The process.</h2></div>
   <div class="steps">
-    <div><b>01</b><h3 data-en="Your Idea" data-fr="Votre idée">Your Idea</h3><p data-en="Send your request, inspiration or images." data-fr="Envoyez votre demande, inspiration ou images.">Send your request, inspiration or images.</p></div>
-    <div><b>02</b><h3 data-en="Your Quote" data-fr="Votre devis">Your Quote</h3><p data-en="We discuss design, dimensions and options." data-fr="Nous définissons ensemble le design et les options.">We discuss design, dimensions and options.</p></div>
-    <div><b>03</b><h3 data-en="Approval" data-fr="Validation">Approval</h3><p data-en="A design preview is prepared before production." data-fr="Un visuel est préparé avant la réalisation.">A design preview is prepared before production.</p></div>
-    <div><b>04</b><h3 data-en="Your Jewelry" data-fr="Votre bijou">Your Jewelry</h3><p data-en="Your custom piece is crafted and prepared with care." data-fr="Votre pièce est réalisée et préparée avec soin.">Your custom piece is crafted and prepared with care.</p></div>
+    <div class="step"><div class="num">01</div><h3>Your Idea</h3><p>Send your request, inspiration or images.</p></div>
+    <div class="step"><div class="num">02</div><h3>Your Quote</h3><p>We discuss design, dimensions and options.</p></div>
+    <div class="step"><div class="num">03</div><h3>Approval</h3><p>A design preview is prepared before production.</p></div>
+    <div class="step"><div class="num">04</div><h3>Your Jewelry</h3><p>Your custom piece is crafted and prepared with care.</p></div>
   </div>
 </section>
 
-<section id="contact" class="contact-section">
-  <div><p class="eyebrow">CONTACT</p><h2 data-en="Let's create something <span>unique.</span>" data-fr="Créons quelque chose <span>d'unique.</span>">Let's create something <span>unique.</span></h2><p data-en="Tell us about the jewelry you imagine and we'll prepare a personalized quote." data-fr="Décrivez-nous le bijou que vous imaginez et nous préparerons un devis personnalisé.">Tell us about the jewelry you imagine and we'll prepare a personalized quote.</p><div class="contact-buttons"><a class="button gold" href="https://wa.me/15615379432" target="_blank" rel="noopener">💬 WhatsApp — (561) 537-9432</a><a class="button outline" href="#chat">💬 Live Chat</a></div></div>
-  <form id="contactForm"><h3 data-en="Request a Quote" data-fr="Demander un devis">Request a Quote</h3><label data-en="Name" data-fr="Nom">Name<input name="name" required placeholder="Your name"></label><label data-en="Phone / WhatsApp" data-fr="Téléphone / WhatsApp">Phone / WhatsApp<input name="phone" type="tel" placeholder="Your number"></label><label data-en="Jewelry Type" data-fr="Type de bijou">Jewelry Type<select name="jewelry"><option>Name Necklace</option><option>Bracelet</option><option>Ring</option><option>Pendant</option><option>Other Custom Creation</option></select></label><label data-en="Your Project" data-fr="Votre projet">Your Project<textarea name="message" required placeholder="Describe your idea..."></textarea></label><button class="button gold full" type="submit" data-en="Send My Request on WhatsApp" data-fr="Envoyer ma demande sur WhatsApp">Send My Request on WhatsApp</button></form>
+<section class="section contact" id="contact">
+  <div>
+    <div class="eyebrow">CONTACT</div>
+    <h2 class="title">Let's create something unique.</h2>
+    <p class="body">Tell us about the jewelry you imagine and we'll prepare a personalized quote.</p>
+    <a class="wa" href="https://wa.me/15615379432?text=Hello%20NF%20Gold%20%26%20Luxury%20Jewelry%2C%20I%27d%20like%20a%20custom%20jewelry%20quote." target="_blank">💬 WhatsApp — (561) 537-9432</a>
+  </div>
+  <form class="form" onsubmit="sendQuote(event)">
+    <h3 class="title" style="font-size:30px">Request a Quote</h3>
+    <label>Name</label><input id="name" required placeholder="Your name">
+    <label>Phone / WhatsApp</label><input id="phone" required placeholder="Your number">
+    <label>Jewelry Type</label><select id="type"><option>Custom Necklace</option><option>Custom Bracelet</option><option>Ring</option><option>Diamond Jewelry</option><option>Other</option></select>
+    <label>Your Project</label><textarea id="project" placeholder="Tell us about your idea..."></textarea>
+    <button class="gold-btn" type="submit">SEND MY REQUEST ON WHATSAPP →</button>
+  </form>
 </section>
-
-<section id="chat" class="chat-section"><p class="eyebrow">LIVE CHAT</p><h2 data-en="Questions? <span>We're here.</span>" data-fr="Une question ? <span>Nous sommes là.</span>">Questions? <span>We're here.</span></h2><p data-en="Use the chat bubble on the site to speak with us directly." data-fr="Utilisez la bulle de chat sur le site pour nous écrire directement.">Use the chat bubble on the site to speak with us directly.</p></section>
 </main>
-<footer><img src="logo.jpeg" alt="NF Gold & Luxury Jewelry"><p>© 2026 NF Gold & Luxury Jewelry • Florida</p></footer>
 
-<script src="script.js"></script>
-<script type="text/javascript">var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src='https://embed.tawk.to/6aaab94c3768263445abffdd/1k2le7kt7';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();</script>
+<footer class="footer"><span>© 2026 NF Gold &amp; Luxury Jewelry • Florida</span><span>NF • PARIS · FLORIDA</span></footer>
+
+<a class="float-wa" href="https://wa.me/15615379432" target="_blank">◔ &nbsp; (561) 537-9432</a>
+<button class="chat" onclick="toggleChat()">💬 &nbsp; Chat with us</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">NF Gold &amp; Luxury Jewelry</div>
+  <div class="chat-body">Questions? We're here. Send us a message directly on WhatsApp and we'll help with your custom jewelry project.
+    <a href="https://wa.me/15615379432?text=Hello%20NF%20Gold%20%26%20Luxury%20Jewelry%2C%20I%20have%20a%20question." target="_blank">Open WhatsApp</a>
+  </div>
+</div>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2 class="title">NF Gold &amp; Luxury Jewelry</h2><p class="body" style="margin:auto">French craftsmanship. Timeless elegance. Personalized jewelry.</p></div></div>
+
+<script>
+function toggleChat(){const p=document.getElementById('chatPanel');p.style.display=p.style.display==='block'?'none':'block'}
+function closeModal(){document.getElementById('modal').style.display='none'}
+function sendQuote(e){
+  e.preventDefault();
+  const n=encodeURIComponent(document.getElementById('name').value);
+  const ph=encodeURIComponent(document.getElementById('phone').value);
+  const t=encodeURIComponent(document.getElementById('type').value);
+  const pr=encodeURIComponent(document.getElementById('project').value);
+  const msg=`Hello NF Gold & Luxury Jewelry,%0A%0AName: ${n}%0APhone: ${ph}%0AJewelry: ${t}%0AProject: ${pr}`;
+  window.open(`https://wa.me/15615379432?text=${msg}`,'_blank');
+}
+function setLang(lang){
+  document.documentElement.lang=lang.toLowerCase();
+  if(lang==='FR'){
+    alert('Version française — le contenu peut être traduit dans la prochaine étape.');
+  } else alert('English version selected.');
+}
+</script>
 </body>
 </html>
